@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biglietti Treno</title>
+  </head>
+  <body>
+
+
+
+    <script>
+
+      console.log('hello world')
+
+      var km = prompt('Quanti km vuole percorrere?');
+      var eta = prompt('Quanti hanni ha?');
+      var kmN = parseInt(km);
+      var etaN = parseInt(eta);
+      var tripCost = km * 0.21;
+      var sconto;
+
+
+      console.log(km, eta, tripCost, kmN, etaN);
+
+      if(etaN < 18){
+        sconto = (tripCost / 100) * 20;
+      } else if (etaN > 65){
+        sconto = (tripCost / 100) * 40;
+      } else{
+        sconto = 0
+      }
+      
+      var totale = tripCost - sconto;
+      console.log(tripCost, sconto, totale)
+
+
+
+
+
+    </script>
+  </body>
+</html>
