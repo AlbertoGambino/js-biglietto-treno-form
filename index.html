@@ -19,7 +19,7 @@
       </div>
       <div class="vecchiaggine">
 
-        <span>Lei ha:</span>
+        <span>Lei ha</span>
         <span id="anzianita"></span>
         <span>anni</span>
 
@@ -40,7 +40,7 @@
       </div>
       <div class="scontato">
 
-        <span>Totale scontato</span>
+        <span>Totale scontato:</span>
         <span id="scontato"></span>
         <span>€</span>
 
@@ -67,7 +67,7 @@
       } else if (etaN > 65){
         sconto = (tripCost / 100) * 40;
       } else{
-        sconto = 0
+        sconto = 0;
       }
 
       var totale = tripCost - sconto;
@@ -75,9 +75,9 @@
 
       document.getElementById('spazio').innerHTML = kmN;
       document.getElementById('anzianita').innerHTML = etaN;
-      document.getElementById('risparmio').innerHTML = sconto;
-      document.getElementById('scontato').innerHTML = totale;
-      document.getElementById('total').innerHTML = tripCost;
+      document.getElementById('risparmio').innerHTML = sconto.toFixed(2);
+      document.getElementById('scontato').innerHTML = totale.toFixed(2);
+      document.getElementById('total').innerHTML = tripCost.toFixed(2);
     </script>
   </body>
 </html>
