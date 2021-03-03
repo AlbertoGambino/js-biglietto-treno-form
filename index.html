@@ -3,10 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>Biglietti Treno</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="container">
 
+      <h1>Ferrovie Boolean</h1>
 
+      <div class="chilometraggio">
+
+        <span>Deve fare</span>
+        <span id="spazio"></span>
+        <span>km</span>
+
+      </div>
+      <div class="vecchiaggine">
+
+        <span>Lei ha:</span>
+        <span id="anzianita"></span>
+        <span>anni</span>
+
+      </div>
+      <div class="scontistica">
+
+        <span>Ha risparmiato</span>
+        <span id="risparmio"></span>
+        <span>€</span>
+
+      </div>
+      <div class="prezzo">
+
+        <span>Totale da pagare:</span>
+        <span id="total"></span>
+        <span>€</span>
+
+      </div>
+      <div class="scontato">
+
+        <span>Totale scontato</span>
+        <span id="scontato"></span>
+        <span>€</span>
+
+      </div>
+
+    </div>
 
     <script>
 
@@ -29,14 +69,15 @@
       } else{
         sconto = 0
       }
-      
+
       var totale = tripCost - sconto;
       console.log(tripCost, sconto, totale)
 
-
-
-
-
+      document.getElementById('spazio').innerHTML = kmN;
+      document.getElementById('anzianita').innerHTML = etaN;
+      document.getElementById('risparmio').innerHTML = sconto;
+      document.getElementById('scontato').innerHTML = totale;
+      document.getElementById('total').innerHTML = tripCost;
     </script>
   </body>
 </html>
